@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title>Fab Libs</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +47,14 @@
             });
 //clickFind global var gets set to date-key, value. 
             $(".find").click(function(){
+
+    	    	$(".find").css({
+    		    "background-color": "yellow"
+            	});
+            	
+            	$(this).css({
+            	"background-color": "lightskyblue"	
+            	})
     	        console.log("console message find "+$(this).attr("data-key"));
     	        clickFind = $(this).attr("data-key");
 			});
@@ -127,7 +135,7 @@ Trust in me when I say
    <div class="row">
    		<div class="col-md-8">
  			<footer>
-				<button type="button">I just made this song better!!</button>
+
  			</footer>
  		</div>
     </div>
