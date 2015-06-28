@@ -32,19 +32,31 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
     <script type = "text/javascript">
         $(document).ready(function(){
-    	    $("span").css({
+    	    $(".find").css({
     		   "background-color": "yellow"
             });
 
-            $("span").click(function(){
-    	        var whatisclicked = "span";
-                alert("Value: " + $("span").val());
-                var whatisclicked = null;
+            $(".find").click(function(){
+    	        console.log("console message find "+$(this).attr("data-key"));
+			});
+            
+            $(".replace").click(function(){
+    	        console.log("console message replace "+$(this).text());
             }); 
+            $( ".find" ).each(function( index ) {
+  				$(this).attr("data-key",index)
+			});
         });
     </script>
+
 
     <style type="text/css">
         .box {
@@ -112,11 +124,6 @@ Trust in me when I say
     </div>
 </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
 
 </body>
 
