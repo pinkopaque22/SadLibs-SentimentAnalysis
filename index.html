@@ -40,19 +40,28 @@
 
     <script type = "text/javascript">
         $(document).ready(function(){
+        	var clickFind = null;
+
     	    $(".find").css({
     		   "background-color": "yellow"
             });
-
+//clickFind global var gets set to date-key, value. 
             $(".find").click(function(){
     	        console.log("console message find "+$(this).attr("data-key"));
+    	        clickFind = $(this).attr("data-key");
 			});
             
             $(".replace").click(function(){
-    	        console.log("console message replace "+$(this).text());
+    	        console.log("console message replace"+$(this).text());
+    	        if (clickFind != null){
+    	        	var replace = $(this).text();
+					$(".find[data-key="+ clickFind +"]").text(replace);	
+    	        }
+    	        
             }); 
             $( ".find" ).each(function( index ) {
   				$(this).attr("data-key",index)
+
 			});
         });
     </script>
