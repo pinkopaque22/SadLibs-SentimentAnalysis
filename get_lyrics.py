@@ -2,6 +2,7 @@
 import sys
 import musixmatch
 import random
+import nltk
 sys.path.append('/usr/local/lib/python.2.7/site-packages')
 
 from musixmatch.lyrics import Lyrics
@@ -28,3 +29,7 @@ print "LYRICS"
 print "======"
 print text
 print ""
+
+text = nltk.word_tokenize(text)
+print nltk.pos_tag(text)
+
