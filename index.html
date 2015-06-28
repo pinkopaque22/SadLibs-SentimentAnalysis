@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,19 +29,40 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script type = "text/javascript">
+        $(document).ready(function(){
+    	    $("span").css({
+    		   "background-color": "yellow"
+            });
+
+            $("span").click(function(){
+    	        var whatisclicked = "span";
+                alert("Value: " + $("span").val());
+                var whatisclicked = null;
+            }); 
+        });
+    </script>
+
+    <style type="text/css">
+        .box {
+    	    height: 350px;
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/bgtop.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>SadLibs</h1>
-                        <hr class="small">
+                        
+                        
                         <span class="subheading"></span>
                     </div>
                 </div>
@@ -49,9 +70,10 @@
         </div>
     </header>
 
-<section>
-<!-- in main should song lyrics-->
-        <main> <pre>You're just too good to be true
+<div class="container">
+	<div class="row">	
+ 		<pre class="main col-md-6">
+You're just too good to be true
 Can't take my eyes off you
 You'd be like <span>heaven</span> to touch
 I wanna hold you so much
@@ -62,31 +84,27 @@ Can't take my eyes off you
 I love you <span>baby</span>
 And if it's quite all right
 I need you baby
-To warm the <span>lonely</span>nights
+To warm the <span>lonely</span> nights
 I love you baby
-Trust in me when I say
-</pre>
-
-        </main>
-        <aside>
-<ul>
-    <li>word</li>
-    <li>word1</li>
-    <li>word2</li>
-    <li>word3</li>
-</ul>
-        </aside>
-    </section>
-    <footer>
-    <button type="button">I just made this song better!!</button>
-
-    </footer>
-
-
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+Trust in me when I say	
+		</pre> 
+        <div class="aside col-md-6">
+			<span>Satan</span>
+			<span>Purgatory</span>
+			<span>Tears</span>
+			<span>Cake</span>						
+	   </div>
+	</div>	   
+</div>
+<div class="container">
+   <div class="row">
+   		<div class="col-md-8">
+ 			<footer>
+				<button type="button">I just made this song better!!</button>
+ 			</footer>
+ 		</div>
+    </div>
+</div>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
