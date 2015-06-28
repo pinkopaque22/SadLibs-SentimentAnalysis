@@ -22,5 +22,9 @@ try:
 except musixmatch.api.Error, e:
 	pass
 
-print(slyrics)
+text = slyrics['body']['lyrics']['lyrics_body']
 
+print "LYRICS"
+print "======"
+print text
+print ""
